@@ -1,0 +1,340 @@
+:root {
+  --bg-color: #F6F6F6;
+  --grey: #353535;
+  --grey-light: #EAEAEA;
+  --grey-tint-4: #7E7E7E;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+.main-container {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .main-container {
+    max-width: 1440px;
+    padding: 0 180px;
+    box-sizing: border-box;
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.section__title {
+  font-family: Roboto;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px;
+}
+
+.header-headline {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 0px 13px 0px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+}
+.header-headline__button {
+  position: absolute;
+  left: 17px;
+  padding: 0;
+  border: none;
+  background: none;
+  opacity: 0;
+}
+.header-headline__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--grey);
+  font-size: 30px;
+}
+.header-headline__logo {
+  margin: 0;
+  color: var(--black, #101010);
+  font-family: Shrikhand;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+}
+
+.header-location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 17px;
+  height: 50px;
+  background-color: var(--grey-light);
+}
+.header-location__icon {
+  color: var(--grey);
+  font-size: 16px;
+}
+.header-location__button {
+  background: none;
+  border: none;
+  color: var(--grey);
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 19px;
+  padding: 0;
+}
+
+.explore {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 39px 0 57px 0;
+  background-color: var(--bg-color);
+}
+@media (min-width: 768px) {
+  .explore {
+    padding: 30px 0 30px 0;
+  }
+}
+.explore__title {
+  margin: 0;
+  text-align: center;
+}
+.explore__subtitle {
+  margin: 0;
+  margin-top: 18px;
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 21px;
+  text-align: center;
+}
+.explore__button {
+  width: 218px;
+  padding: 13px 18.75px 13px 18.75px;
+  margin-top: 27px;
+  background: var(--button-gradient, linear-gradient(0deg, #9356DC 0%, #FF79DA 100%));
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 19px;
+}
+
+.how-it-works {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  padding: 48px 0 68px 0;
+}
+@media (min-width: 768px) {
+  .how-it-works {
+    gap: 25px;
+    padding: 50px 0 50px 0;
+  }
+}
+.how-it-works__title {
+  margin: 0;
+  margin-left: 20px;
+}
+.how-it-works__steps {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+@media (min-width: 768px) {
+  .how-it-works__steps {
+    flex-direction: row;
+    gap: 36px;
+    margin-left: 20px;
+  }
+}
+.how-it-works__step {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 322px;
+  height: 72.4px;
+  border-radius: 20px;
+  background-color: var(--bg-color);
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+}
+.how-it-works__step-number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  color: white;
+  background-color: #9356DC;
+  border-radius: 50%;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 17px;
+  transform: translateX(-50%);
+}
+.how-it-works__step-icon {
+  position: absolute;
+  left: 33px;
+  font-size: 20px;
+  color: var(--grey-tint-4);
+}
+.how-it-works__step-description {
+  position: absolute;
+  left: 73.49px;
+  margin: 0;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 19px;
+}
+
+.restaurants {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  padding: 54px 0 66px 0;
+  background-color: var(--bg-color);
+}
+@media (min-width: 768px) {
+  .restaurants {
+    padding: 30px 0 30px 0;
+  }
+}
+.restaurants__title {
+  margin: 0;
+  margin-left: 20px;
+}
+.restaurants__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin: 0 18px 0 17px;
+}
+@media (min-width: 768px) {
+  .restaurants__cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 100px;
+    row-gap: 50px;
+  }
+}
+.restaurants__card {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  .restaurants__card {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: calc((100% - 100px) / 2);
+  }
+}
+.restaurants__card-image {
+  width: 100%;
+  height: 174px;
+  object-fit: cover;
+}
+.restaurants__card-content {
+  display: flex;
+}
+.restaurants__card-title {
+  padding-left: 13px;
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 21px;
+}
+.restaurants__card-subtitle {
+  padding-left: 13px;
+  font-family: Roboto;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 20px;
+}
+.restaurants__card-like {
+  font-size: 21px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 22px 25px 22px 25px;
+  background-color: var(--grey);
+}
+@media (min-width: 768px) {
+  .footer {
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    padding: 30px 25px 30px 25px;
+    height: 54px;
+  }
+}
+.footer__logo {
+  margin: 0;
+  color: white;
+  font-family: Shrikhand;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+}
+.footer__list {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+@media (min-width: 768px) {
+  .footer__list {
+    flex-direction: row;
+  }
+}
+.footer__item {
+  display: flex;
+  align-items: center;
+}
+.footer__link {
+  color: white;
+  text-decoration: none;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 19px;
+}
+.footer__icon {
+  width: 11px;
+  margin-right: 11px;
+  color: white;
+  font-size: 13px;
+}
+
+/*# sourceMappingURL=style.css.map */

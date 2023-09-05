@@ -1,0 +1,39 @@
+// === GRID ===
+
+.home-container {
+  // Box Model
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+
+  @include tablet {
+      // Box Model
+      max-width: 1024px;
+      padding: 0 180px 0 180px;
+  }
+
+  @include desktop {
+      // Box Model
+      max-width: 1440px;
+      padding: 0 180px 0 180px;
+  }
+}
+
+.menu-container {
+  // Box Model
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+
+  @include tablet {
+      // Box Model
+      max-width: 1024px;
+      padding: 0 192px 0 193px;
+  }
+
+  @include desktop {
+      // Box Model
+      max-width: 1440px;
+      padding: 0 192px 0 193px;
+  }
+}

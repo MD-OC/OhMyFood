@@ -1,0 +1,20 @@
+// === MIXINS ===
+
+@mixin tablet {
+  @media (min-width: $tablet-start) and (max-width: $tablet-end) {
+      @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop-start) {
+      @content;
+  }
+}
+
+@mixin tablet-desktop {
+  @media (min-width: $tablet-start) and (max-width: $tablet-end),
+         (min-width: $desktop-start) {
+      @content;
+  }
+}

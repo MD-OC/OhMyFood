@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "sass": "sass --watch ./sass/main.scss:./assets/css/style.css",
-    "start": "browser-sync start --server --files 'index.html, assets/css/*.css' --no-notify",
+    "start": "browser-sync start --server --files 'index.html, menu1.html, assets/css/*.css' --no-notify",
     "dev": "npm run sass & npm run start"
   },
   "repository": {
@@ -20,5 +20,8 @@
   "homepage": "https://github.com/MD-OC/OhMyFood#readme",
   "devDependencies": {
     "browser-sync": "^2.29.3"
+  },
+  "dependencies": {
+    "sass": "^1.66.1"
   }
 }

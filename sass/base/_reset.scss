@@ -1,0 +1,21 @@
+// === RESET ===
+
+body {
+    // Box Model
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+header, main, section, footer {
+    // Box Model
+    width: 100%;
+    box-sizing: border-box;
+}
+
+main {
+    // Box Model
+    display: flex;
+    flex-direction: column;
+}

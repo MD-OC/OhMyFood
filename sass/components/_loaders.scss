@@ -1,0 +1,52 @@
+// === LOADERS ===
+
+.home-loader {
+    // Positioning
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+
+    // Box Model
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    // Background and Color
+    background-color: black;
+    opacity: 0.8;
+
+    // Transitions and animations
+    animation: fadeOut 3000ms forwards 1000ms;
+
+    &__spinner {
+        // Box Model
+        width: 40px;
+        height: 40px;
+        border: 14px solid #FF79DA;
+        border-top: 14px solid #9356DC;
+        border-bottom: 14px solid #9356DC;
+        border-radius: 50%;
+        
+        // Transitions and animations
+        animation: spin 400ms linear infinite;
+    }
+
+    @keyframes fadeOut {
+        to {
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+}

@@ -1,0 +1,166 @@
+// === BUTTONS ===
+
+.back-button {
+    // Box Model
+    display: flex;
+    align-items: center;
+    border: none;
+    padding: 0;
+
+    // Background and Color
+    background-color: transparent;
+
+    // Typography 
+    text-decoration: none;
+
+    &__icon {     
+        // Background and Color
+        color: var(--grey);
+
+        // Typography
+        font-size: 17px;
+
+        @include tablet {
+            // Typography
+            font-size: 16px;
+        }
+
+        @include desktop {
+            // Typography
+            font-size: 16px;
+        }
+    }
+}
+
+.like-button {
+    // Positioning
+    position: relative;
+
+    // Box Model
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include tablet {
+        &:hover &__full {
+            // Layout
+            opacity: 1;
+
+            // Other
+            cursor: pointer;
+        }
+    
+        &:hover &__empty {
+            // Layout
+            opacity: 0;
+
+            // Other
+            cursor: pointer;
+        }
+    }
+
+    @include desktop {
+        &:hover &__full {
+            // Layout
+            opacity: 1;
+
+            // Other
+            cursor: pointer;
+        }
+    
+        &:hover &__empty {
+            // Layout
+            opacity: 0;
+
+            // Other
+            cursor: pointer;
+        }
+    }
+
+    &__empty {
+        // Positioning
+        position: absolute;
+
+        // Background and Color
+        color: black;
+
+        // Transitions
+        transition: opacity 300ms ease;
+    }
+
+    &__full {
+        // Background and Color
+        background: linear-gradient(#9356DC, #FF79DA);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+
+        // Layout
+        opacity: 0;
+
+        // Transitions
+        transition: opacity 300ms ease;
+    }
+
+    &:active &__full {
+        // Layout
+        opacity: 1;
+
+        // Other
+        cursor: pointer;
+    }
+
+    &:active &__empty {
+        // Layout
+        opacity: 0;
+
+        // Other
+        cursor: pointer;
+    }    
+}
+
+.menu-button {
+    // Box Model
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25); 
+
+    // Background and Color
+    background: linear-gradient(175deg, #FF79DA 0%, #9356DC 100%);
+    color: white;
+
+    // Typography
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 19px;
+
+    &:hover {
+        // Box Model
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
+
+        // Background and Color
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(182deg, #FF79DA 0%, #9356DC 100%); 
+
+        // Other
+        cursor: pointer;
+    }
+}
+
+.new-button {
+    // Box Model
+    padding: 7px 9px 6px 9px;
+    border-radius: 2px;
+
+    // Background and Color
+    color: var(--green-font);
+    background-color: var(--green);
+
+    // Typography
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+}

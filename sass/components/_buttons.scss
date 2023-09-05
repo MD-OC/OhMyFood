@@ -164,3 +164,24 @@
     font-weight: 500;
     line-height: 16px;
 }
+
+.select-button {
+    // Box Model
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 59px;
+    border-radius: 0px 15px 15px 0px;
+    border: none;
+
+    // Background and Color
+    background-color: #99E2D0;
+
+    &__icon {
+        // Typography
+        font-size: 20px;
+
+        // Background and Color
+        color: white;
+    }
+}

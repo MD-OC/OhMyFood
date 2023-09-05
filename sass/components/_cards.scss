@@ -4,19 +4,31 @@
     // Box Model
     display: flex;
     justify-content: space-between;
-    gap: 5px;
-    padding: 15px 15px 15px 15px;
+    // gap: 5px;
+    // padding: 15px 15px 15px 15px;
     border-radius: 15px;
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
 
     // Background and Color
     background-color: white;
 
+    overflow: hidden;
+
+    &:hover &__button {
+        // Box Model
+        margin-right: 0px;
+    }
+
     &__content {
+        // Box Model
         display: flex;
         flex-direction: column;
         gap: 5px;
         flex: 1;
+        margin: 15px 5px 15px 15px;
+
+        // Layout
+        overflow: hidden;
 
         &-title {
             // Box Model
@@ -28,6 +40,11 @@
             font-style: normal;
             font-weight: 500;
             line-height: 21px;
+
+            // Layout
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
         }
 
         &-subtitle {
@@ -39,13 +56,19 @@
             font-size: 15px;
             font-style: normal;
             font-weight: 300;
-            line-height: 18px;            
+            line-height: 18px;
+
+            // Layout
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
         }
     }
 
     &__price {
         // Box Model
-        margin: 0;
+        // margin: 0;
+        margin: 0px 15px 15px 0px;
         align-self: end;
 
         // Typography
@@ -63,6 +86,14 @@
             font-weight: 700;
             line-height: 18px;
         }
+    }
+
+    &__button {
+        // Box Model
+        margin-right: -59px;
+
+        // Transformations
+        transition: margin-right 250ms ease-out;
     }
 }
 

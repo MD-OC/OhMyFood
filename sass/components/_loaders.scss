@@ -1,5 +1,8 @@
 // === LOADERS ===
 
+$home-loader-size: 90px;
+$home-loader-animation-duration: 1000ms;
+
 .home-loader {
     // Positioning
     position: fixed;
@@ -14,39 +17,128 @@
     justify-content: center;
     align-items: center;
 
-    // Background and Color
-    background-color: black;
-    opacity: 0.8;
-
     // Transitions and animations
-    animation: fadeOut 3000ms forwards 1000ms;
+    animation: homeLoaderAnimation $home-loader-animation-duration both;
 
-    &__spinner {
-        // Box Model
-        width: 40px;
-        height: 40px;
-        border: 14px solid #FF79DA;
-        border-top: 14px solid #9356DC;
-        border-bottom: 14px solid #9356DC;
-        border-radius: 50%;
-        
+    &__background {
+        // Positioning
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    
+        // Background and Color
+        background-color: black;
+        opacity: 0.8;
+    
         // Transitions and animations
-        animation: spin 400ms linear infinite;
+        animation: homeLoaderBackground $home-loader-animation-duration both;
     }
 
-    @keyframes fadeOut {
-        to {
-            opacity: 0;
-            visibility: hidden;
-        }
+    &__circle {
+        // Positioning
+        position: absolute;
+
+        // Box Model
+        width: $home-loader-size + 10px;
+        height: $home-loader-size + 10px;
+        border-radius: 50%;
+
+        // Background and Color
+        background: linear-gradient(#FF79DA, #9356DC);
+        color: black;
+
+        // Typography
+        font-family: Shrikhand;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-align: center;
+
+        // Transitions and animations
+        animation: homeLoaderCircle $home-loader-animation-duration cubic-bezier(0.9, 0.1, 1, 0.2) both; // ease-out
     }
 
-    @keyframes spin {
-        0% {
-            transform: rotate(0deg);
-        }
-        100% {
-            transform: rotate(360deg);
-        }
+    &__logo {
+        // Positioning
+        position: absolute;
+
+        // Box Model
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: $home-loader-size;
+        height: $home-loader-size;
+        border-radius: 50%;
+
+        // Background and Color
+        color: black;
+        background: white;
+
+        // Typography
+        font-family: Shrikhand;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-align: center;
+
+        // Transitions and animations
+        animation: homeLoaderLogo $home-loader-animation-duration cubic-bezier(0, 1, .72, 1) both; // ease-out
+    }
+}
+
+@keyframes homeLoaderAnimation {
+    100% {
+        // Layout
+        visibility: hidden;
+    }
+}
+
+@keyframes homeLoaderBackground {
+    0%, 90% {
+        // Layout
+        opacity: 0.8;
+    }
+    100% {
+        // Layout
+        opacity: 0;
+    }
+}
+
+@keyframes homeLoaderCircle {
+    0% {
+        // Transformations
+        transform: rotate(0deg);
+        transform: scale(1);
+    }
+    24% {
+        // Transformations
+        transform: scale(1.4);
+    }
+    32% {
+        // Transformations
+        transform: scale(1);
+    }
+    100% {
+        // Transformations
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes homeLoaderLogo {
+    0% {
+        // Transformations
+        transform: rotate(0deg);
+    }
+    30% {
+        // Transformations
+        transform: rotate(720deg);
+    }
+    100% {
+        // Transformations
+        transform: rotate(720deg);
     }
 }

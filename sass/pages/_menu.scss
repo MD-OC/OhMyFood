@@ -13,15 +13,6 @@
     // Background and Color
     background-color: #F6F6F6;
 
-    @include tablet {
-        // Box Model
-    }
-
-    @include desktop {
-        // Box Model
-        padding: 0 211px 40px 210px;
-    }
-
     &__headline {
         // Box Model
         display: flex;
@@ -64,7 +55,6 @@
                 // Box Model
                 margin: 0;
             }
-        
         }
 
         &-like {
@@ -115,6 +105,11 @@
             display: flex;
             flex-direction: column;
             gap: 12px;
+        }
+
+        @include desktop {
+          // Box Model
+          max-width: 626px;  
         }
     }
 

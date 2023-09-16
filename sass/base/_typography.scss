@@ -1,4 +1,4 @@
-%home-title {
+@mixin home-title-mobile {
     // Typography
     font-family: Roboto;
     font-size: 24px;
@@ -7,15 +7,11 @@
     line-height: 28px;
 }
 
-%menu-title-style {
-    // Box Model
-    margin: 0;
-
+@mixin home-title-desktop {
     // Typography
     font-family: Roboto;
-    font-size: 16px;
+    font-size: 40px;
     font-style: normal;
-    font-weight: 300;
-    line-height: 19px;
-    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 47px;
 }

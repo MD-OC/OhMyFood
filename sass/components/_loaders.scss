@@ -1,5 +1,3 @@
-// === LOADERS ===
-
 $home-loader-size: 90px;
 $home-loader-animation-duration: 1000ms;
 
@@ -29,7 +27,7 @@ $home-loader-animation-duration: 1000ms;
         left: 0;
     
         // Background and Color
-        background-color: black;
+        background-color: $black;
         opacity: 0.8;
     
         // Transitions and animations
@@ -46,8 +44,8 @@ $home-loader-animation-duration: 1000ms;
         border-radius: 50%;
 
         // Background and Color
-        background: linear-gradient(#FF79DA, #9356DC);
-        color: black;
+        background: linear-gradient($pale-magenta, $amethyst);
+        color: $black;
 
         // Typography
         font-family: Shrikhand;
@@ -58,7 +56,7 @@ $home-loader-animation-duration: 1000ms;
         text-align: center;
 
         // Transitions and animations
-        animation: homeLoaderCircle $home-loader-animation-duration cubic-bezier(0.9, 0.1, 1, 0.2) both; // ease-out
+        animation: homeLoaderCircle $home-loader-animation-duration cubic-bezier(0.9, 0.1, 1, 0.2) both; // ease-in
     }
 
     &__logo {
@@ -69,12 +67,13 @@ $home-loader-animation-duration: 1000ms;
         display: flex;
         justify-content: center;
         align-items: center;
+        margin: 0;
         width: $home-loader-size;
         height: $home-loader-size;
         border-radius: 50%;
-
+        
         // Background and Color
-        color: black;
+        color: $black;
         background: white;
 
         // Typography

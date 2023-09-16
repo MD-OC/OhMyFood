@@ -1,8 +1,6 @@
-// === FOOTER ===
-
 .footer {
     // Background and Color
-    background-color: var(--grey);
+    background-color: $night-rider;
 
     &__wrapper {
         // Box Model
@@ -14,7 +12,6 @@
         @include tablet {
             // Box Model
             flex-direction: row-reverse;
-            align-items: flex-end;
             gap: 74px; // 130 (Contact) - 56 = 74
             padding: 30px 25px 30px 25px;
             margin: 0 auto;
@@ -25,7 +22,6 @@
         @include desktop {
             // Box Model
             flex-direction: row-reverse;
-            align-items: flex-end;
             gap: 74px; // 130 (Contact) - 56 = 74
             padding: 30px 25px 30px 25px;
             margin: 0 auto;
@@ -39,7 +35,7 @@
         margin: 0 40px 0 0; // 137(ohmyfood)-97=40
 
         // Background and Color
-        color: white;
+        color: $white;
 
         // Typography
         font-family: Shrikhand;
@@ -47,6 +43,20 @@
         font-style: normal;
         font-weight: 400;
         line-height: 26px;
+
+        @include tablet {
+            // Box Model
+            display: flex;
+            align-items: flex-end;
+            height: 54px;
+        }
+
+        @include desktop {
+            // Box Model
+            display: flex;
+            align-items: flex-end;
+            height: 54px;
+        }
     }
 
     &__list {
@@ -61,11 +71,15 @@
         @include tablet {
             // Box Model
             flex-direction: row;
+            align-items: flex-end;
+            height: 54px;
         }
 
         @include desktop {
             // Box Model
             flex-direction: row;
+            align-items: flex-end;
+            height: 54px;
         }
 
         &-item {
@@ -90,7 +104,7 @@
 
         &-link {
             // Background and Color
-            color: white;
+            color: $white;
 
             // Typography
             font-family: Roboto;
@@ -112,7 +126,7 @@
             margin-right: 11px;
 
             // Background and Color
-            color: white;
+            color: $white;
 
             // Typography
             font-size: 13px;

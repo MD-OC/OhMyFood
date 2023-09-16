@@ -1,5 +1,3 @@
-// === MIXINS ===
-
 @mixin tablet {
     @media (min-width: $tablet-start) and (max-width: $tablet-end) {
         @content;
@@ -11,9 +9,3 @@
         @content;
     }
 }
-
-// @mixin tablet-desktop {
-//     @media (min-width: $tablet-start) and (max-width: $tablet-end),(min-width: $desktop-start) {
-//         @content;
-//     }
-// }

@@ -1,14 +1,19 @@
-// === VARIABLES ===
+// === RESPONSIVE ===
 
 $tablet-start: 768px;
 $tablet-end: 1024px;
 $desktop-start: 1025px;
 
-:root {
-    --bg-color: #F6F6F6;
-    --grey: #353535;
-    --grey-light: #EAEAEA;
-    --grey-tint-4: #7E7E7E;
-    --green-font: #008766;
-    --green: #99E2D0;
-}
+// === COLORS ===
+
+$amethyst: #9356DC;
+$black: #000000;
+$black-2: #101010; 
+$grey: #7E7E7E;
+$night-rider: #353535;
+$observatory: #008766;
+$pale-magenta: #FF79DA;
+$riptide: #99E2D0;
+$whisper: #EAEAEA;
+$white: #FFFFFF;
+$white-smoke: #F6F6F6;

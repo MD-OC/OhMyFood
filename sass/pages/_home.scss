@@ -1,8 +1,6 @@
-// === HOME ===
-
 .explore {
     // Background and Color
-    background-color: var(--bg-color);
+    background-color: $white-smoke;
 
     &__wrapper {
         // Box Model
@@ -26,42 +24,32 @@
         &__title {
             // Box Model
             margin: 0;
+
+            // Background and Color
+            color: $black;
         
             // Typography
-            // font-family: Roboto;
-            // font-size: 24px;
-            // font-style: normal;
-            // font-weight: 700;
-            // line-height: 28px;
-            // text-align: center;
-
-            // Typography
-            @extend %home-title;
+            @include home-title-mobile;
             text-align: center;
 
             @include tablet {
                 // Typography
-                font-family: Roboto;
-                font-size: 40px;
-                font-style: normal;
-                font-weight: 700;
-                line-height: 47px;
+                @include home-title-desktop;
             }
 
             @include desktop {
                 // Typography
-                font-family: Roboto;
-                font-size: 40px;
-                font-style: normal;
-                font-weight: 700;
-                line-height: 47px;
+                @include home-title-desktop;
             }
         }
 
         &__subtitle {
             // Box Model
             margin: 0;
-            margin-top: 18px;
+            margin-top: 30px; // 46-21=25 /2=12.5 +18=30.5
+
+            // Background and Color
+            color: $night-rider;
 
             // Typography
             font-family: Roboto;
@@ -80,12 +68,12 @@
 
             @include tablet {
                 // Box Model
-                margin-top: 18px;
+                margin-top: 30px; // 46-21=25 /2=12.5 +18=30.5
             }
 
             @include desktop {
                 // Box Model
-                margin-top: 18px;
+                margin-top: 30px; // 46-21=25 /2=12.5 +18=30.5
             }
         }
 }
@@ -114,7 +102,7 @@
         margin-bottom: 26px;
 
         // Typography
-        @extend %home-title;
+        @include home-title-mobile;
 
         @include tablet {
             // Box Model
@@ -134,12 +122,6 @@
         align-items: center;
         gap: 25px;
         margin-left: 12px;
-
-        @include tablet {
-            // Box Model
-            flex-direction: row;
-            gap: 36px;
-        }
 
         @include desktop {
             // Box Model
@@ -162,10 +144,10 @@
             box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 
             // Background and Color
-            background-color: var(--bg-color);
+            background-color: $white-smoke;
 
             &:hover .how-it-works__step-icon {
-                color: #9356DC;
+                color: $amethyst;
             }
         }
 
@@ -183,8 +165,8 @@
                 border-radius: 50%;
 
                 // Background and Color
-                color: white;
-                background-color: #9356DC;
+                color: $white;
+                background-color: $amethyst;
                 
                 // Typography
                 font-family: Roboto;
@@ -207,7 +189,7 @@
                 margin-left: 34px;
 
                 // Background and Color
-                color: var(--grey-tint-4);
+                color: $grey;
 
                 // Typography
                 font-size: 20px;
@@ -229,7 +211,7 @@
 
 .restaurants {
     // Background and Color
-    background-color: var(--bg-color);
+    background-color: $white-smoke;
 
     &__wrapper {
         // Box Model
@@ -254,7 +236,7 @@
             margin: 0;
 
             // Typography
-            @extend %home-title;
+            @include home-title-mobile;
         }
 
         &__cards {

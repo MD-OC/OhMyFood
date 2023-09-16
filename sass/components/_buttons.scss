@@ -1,5 +1,3 @@
-// === BUTTONS ===
-
 .back-button {
     // Box Model
     display: flex;
@@ -15,7 +13,7 @@
 
     &__icon {     
         // Background and Color
-        color: var(--grey);
+        color: $night-rider;
 
         // Typography
         font-size: 17px;
@@ -41,48 +39,12 @@
     justify-content: center;
     align-items: center;
 
-    @include tablet {
-        &:hover &__full {
-            // Layout
-            opacity: 1;
-
-            // Other
-            cursor: pointer;
-        }
-    
-        &:hover &__empty {
-            // Layout
-            opacity: 0;
-
-            // Other
-            cursor: pointer;
-        }
-    }
-
-    @include desktop {
-        &:hover &__full {
-            // Layout
-            opacity: 1;
-
-            // Other
-            cursor: pointer;
-        }
-    
-        &:hover &__empty {
-            // Layout
-            opacity: 0;
-
-            // Other
-            cursor: pointer;
-        }
-    }
-
     &__empty {
         // Positioning
         position: absolute;
 
         // Background and Color
-        color: black;
+        color: $black;
 
         // Transitions
         transition: opacity 300ms ease;
@@ -90,7 +52,7 @@
 
     &__full {
         // Background and Color
-        background: linear-gradient(#9356DC, #FF79DA);
+        background: linear-gradient($amethyst, $pale-magenta);
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
@@ -102,7 +64,7 @@
         transition: opacity 300ms ease;
     }
 
-    &:active &__full {
+    &:hover &__full {
         // Layout
         opacity: 1;
 
@@ -110,7 +72,7 @@
         cursor: pointer;
     }
 
-    &:active &__empty {
+    &:hover &__empty {
         // Layout
         opacity: 0;
 
@@ -126,8 +88,8 @@
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25); 
 
     // Background and Color
-    background: linear-gradient(175deg, #FF79DA 0%, #9356DC 100%);
-    color: white;
+    background: linear-gradient(175deg, $pale-magenta 0%, $amethyst 100%);
+    color: $white;
 
     // Typography
     font-family: Roboto;
@@ -141,7 +103,7 @@
         box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
 
         // Background and Color
-        background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(182deg, #FF79DA 0%, #9356DC 100%); 
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(182deg, $pale-magenta 0%, $amethyst 100%); 
 
         // Other
         cursor: pointer;
@@ -154,8 +116,8 @@
     border-radius: 2px;
 
     // Background and Color
-    color: var(--green-font);
-    background-color: var(--green);
+    color: $observatory;
+    background-color: $riptide;
 
     // Typography
     font-family: Roboto;
@@ -175,13 +137,13 @@
     border: none;
 
     // Background and Color
-    background-color: #99E2D0;
+    background-color: $riptide;
 
     &__icon {
         // Typography
         font-size: 20px;
 
         // Background and Color
-        color: white;
+        color: $white;
     }
 }

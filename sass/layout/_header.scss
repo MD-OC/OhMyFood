@@ -1,14 +1,12 @@
-// === HEADER ===
-
 .header-headline {
+    // Positioning
+    position: relative;
+
     // Box Model
     display: flex;
     align-items: center;
     padding: 14px 0px 13px 0px;
     box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.15);
-
-    // Layout
-    clip-path: inset(0px 0px -6px 0px);
 
     &__nav {
         // Positioning
@@ -23,8 +21,11 @@
         }
 
         &__logo {
+            // Box Model
+            margin: 0;
+
             // Background and Color
-            color: var(--black, #101010);
+            color: $black-2;
 
             // Typography
             font-family: Shrikhand;
@@ -37,10 +38,8 @@
 }
 
 .header-location {
-    // Positioning
-
     // Background and Color
-    background-color: var(--grey-light); 
+    background-color: $whisper; 
 
     &__wrapper {
         // Box Model
@@ -53,16 +52,19 @@
 
         &__icon {
             // Background and Color
-            color: var(--grey);
+            color: $night-rider;
 
             // Typography
             font-size: 16px;
         }
 
         &__title {
+            // Box Model
+            margin: 0;
+
             // Background and Color
             background: none;
-            color: var(--grey);
+            color: $night-rider;
 
             // Typography
             font-family: Roboto;
